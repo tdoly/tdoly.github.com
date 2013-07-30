@@ -28,7 +28,6 @@ tags: [hobby, mountain climbing]
 走过不知道多少遍的小山道，经常会碰到一些登山客从此下。
 ![6][img6]
 ![7][img7]
-![10][img10]
 
 最喜欢走的一条路，平坦，凉爽，寂静。
 ![12][img12]
@@ -58,17 +57,17 @@ tags: [hobby, mountain climbing]
 
 
 
-[img1]: http://www.baidupcs.com/thumbnail/57e76c2be5a3d737960ab03dee22e308?fid=4128125549-250528-419714157&time=1375101685&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-1GTriSSZYttGFOAa7FicOE9fdsg%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "车站"
-[img2]: http://www.baidupcs.com/thumbnail/eebbf678c69c4428d7411854e2644bb4?fid=4128125549-250528-87410108&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-xwwGrmGHTjFo1%2FRZt29ITaYj5fE%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "北京难见蓝天"
+[img1]: http://farm3.staticflickr.com/2877/9398654031_dbc0a98dcb_z.jpg "车站"
+[img2]: http://farm8.staticflickr.com/7386/9398666075_25c4e7183d_z.jpg "北京难见蓝天"
 [img3]: http://www.baidupcs.com/thumbnail/6c4d9ca12010222ae69a873efef55913?fid=4128125549-250528-227532908&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-A6KRg8ilbyyJgGSWeZ%2FZBhrDAJw%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "小山道"
-[img4]: http://www.baidupcs.com/thumbnail/b963518e2d2dbe84d42e68df27f0def2?fid=4128125549-250528-475702384&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-6J6EWSjCWzR%2F7qV0DBh%2F4pvRV6M%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "对面的虎头山"
+[img4]: http://farm6.staticflickr.com/5342/9398655141_02e48eb3c2_z.jpg "对面的虎头山"
 [img5]: http://www.baidupcs.com/thumbnail/150d3f7125c39a1925f9eacefdea0f9a?fid=4128125549-250528-558326827&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-B77cvxls%2BDw3vprzIjSyhyXHY%2FA%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "石道"
-[img6]: http://www.baidupcs.com/thumbnail/0f38a5aa605eed17308878c582511a39?fid=4128125549-250528-680082649&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-3L4jZS2k2%2FqIiC%2B9brtpk88BKBE%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "石道"
-[img7]: http://www.baidupcs.com/thumbnail/049509f6887b0c09b6f7d7fa84f546a7?fid=4128125549-250528-879809534&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-2ngrA75%2FLec2JoYQi59Aur1NsU0%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "平坦小路"
-[img8]: http://www.baidupcs.com/thumbnail/73f1a6415e2cf1de977b31582cdca25c?fid=4128125549-250528-1063777931&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-EB9iCDrSvzSozX1BjkTDQ7ocNNI%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "精印谷中一印章"
-[img9]: http://www.baidupcs.com/thumbnail/049aa6c628b663747b241e322a690046?fid=4128125549-250528-1094496484&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-0L9Ka36dw%2F8zTrLAYqj%2BJvzd%2Ff0%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "看着很舒服"
-[img10]: http://www.baidupcs.com/thumbnail/87c814fc461345eef2623de7405fce2f?fid=4128125549-250528-1490173353&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-tVHrr0bF%2BZ13d8Ar8%2BjmaB0UKEg%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "平坦小路"
-[img11]: http://www.baidupcs.com/thumbnail/f9bf5e8420cf49ec3bfe6f3aba107c4a?fid=4128125549-250528-2359591829&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-0lVHvgZV4ZUBXSnsjqPGhHORnlQ%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "天空两种色彩"
-[img12]: http://www.baidupcs.com/thumbnail/659ceceb40b7903a90d14edd41360946?fid=4128125549-250528-2634115801&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-qoLseozOBTS7wcGp1J6Ch2%2FQuT4%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "最喜欢走的小道"
-[img13]: http://www.baidupcs.com/thumbnail/2c0254acc76fc4f9a6722f62783799bd?fid=4128125549-250528-3442509927&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-PX2Maw5NNVGMuRHKwqkVjUiFJbM%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "山间防火道"
-[img14]: http://www.baidupcs.com/thumbnail/4c5b6d3bc8bf115b5c323760c0fdf601?fid=4128125549-250528-4103415897&time=1375097747&sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-e%2FXp4cfyjL7uXqzG2q3O1IubbyQ%3D&rt=sh&expires=8h&size=c850_u580&quality=100 "出此无山"
+[img6]: http://farm8.staticflickr.com/7396/9401433590_2f15e8d86e_z.jpg "石道"
+[img7]: http://farm6.staticflickr.com/5504/9401428244_2731cc358a_z.jpg "平坦小路"
+[img8]: http://farm8.staticflickr.com/7417/9401415310_ac63b6b247_z.jpg "精印谷中一印章"
+[img9]: http://farm4.staticflickr.com/3683/9401713336_da3b690f20_z.jpg "看着很舒服"
+[img10]:  "平坦小路"
+[img11]: http://farm4.staticflickr.com/3667/9401418186_38d08be499_z.jpg "天空两种色彩"
+[img12]: http://farm6.staticflickr.com/5457/9401426544_4af7bf2031_z.jpg "最喜欢走的小道"
+[img13]: http://farm8.staticflickr.com/7443/9398658635_21e17c1639_z.jpg "山间防火道"
+[img14]: http://farm4.staticflickr.com/3753/9401416930_cfaf0f609d_z.jpg "出此无山"
