@@ -13,6 +13,8 @@ tags: [gits]
 
 ## git init
 
+![git init][git init]
+
 ### The git init Command
 使用`git init` 命令建立一个新的Git仓库。它可以用来改变现有的，或者仓库中未受版本控制的项目，或者初始化一个新的空库。大多数的其他Git命令无法在初始化库之外使用，所以当你建立一个新的项目时通常会第一个使用它。
 执行`git init` 会在项目的根目录下建立一个名为`.git`的子目录，它包含仓库所有必须的元数据。除了这个多出的`.git`目录，已存在的项目没有什么变化（不像SVN，Git不会在每个子目录下都建立`git`目录）。（CVS跟SVN一样，^-^，还是比较喜欢Git）
@@ -54,6 +56,8 @@ tags: [gits]
 
 
 ## git clone
+
+![git clone][git clone]
 
 `git clone` 命令可以复制现有的Git仓库。这有点像`svn checkout`命令，除了“working copy”是一个完整的Git仓库，它有它自己的历史,管理自己的文件,是一个完全孤立于原始库的环境。
 
@@ -97,6 +101,8 @@ tags: [gits]
 
 
 ## git config
+
+![git config][git config]
 
 `git config`命令可以让你从命令行配置Git的安装（或者个人仓库）。这个命令可以定义用户在仓库中所有的行为喜好。下面列出几种常见的配置选项。
 
@@ -173,6 +179,8 @@ tags: [gits]
 
 ## git add
 
+![git add][git add]
+
 `git add`命令可以添加改变的文件到暂定的区域，在下次提交时它会告诉Git你想更新的是哪些特定的文件。然而，`git add`并没有对仓库有实际的改变，改变是没有实际记录的直到你使用`git commit`进行提交。
 
 结合其他命令，你需要使用`git status`来预览工作目录和暂存区的状态。
@@ -222,7 +230,72 @@ Once you’ve got your project up-and-running, new files can be added by passing
 以上的命令也可以用来记录更改现有的文件。再者, Git doesn’t differentiate between staging changes in new files vs. changes in files that have already been added to the repository.
 
 
+## git commit
 
+![git commit][git commit]
+
+`git commit`命令提交阶段快照到项目历史中。提交的快照在一个项目中可以认为是一个安全的版本，Git从不改变它们除非你明确的告诉Git那么做。和`git add`一样，这是一个很重要的Git命令。
+
+这个命令不像`svn commit`,虽然它们有着一样的名称。快照会提交到本地仓库，这需要与其他的Git仓库没有绝对的交互。
+
+### Usage
+
+    git commit
+
+提交阶段式的快照。这将启动一个文本编辑器的提示提交消息。在你输入信息,保存文件并关闭编辑器来创建实际的提交。
+
+    git commit -m "<message>"
+
+提交阶段式的快照，但是不启动文本编辑器，它会使用message作为提交信息。
+
+    git commit -a
+
+提交工作目录所有改变的快照。这只会包含更改过的跟踪文件（那些被加上`git add`会在同一个点的历史中）。
+
+### Discussion
+
+快照总被添加在本地仓库。从本质上就与SVN不同，SVN会将所有的工作副本都提交在中央仓库。相比之下，Git并不强调你与中央仓库的交互，如果你想读取中央仓库那就另说。正像暂存区域是工作目录和项目历史之间的缓冲区，所有的开发者本地仓库是他们贡献的项目与中央仓库的缓冲区。
+
+这改变了Git用户的基本开发模式。不是没做一次改变都会提交到中央仓库，Git的开发人员可以在他本地仓库积累提交。与SVN风格的协作有许多优点：这使得它更容易分裂成原子提交,保持相关提交组合在一起,并清理本地的历史在提交到它的中央存储库之前。它还允许开发人员工作在一个孤立的环境,可以推迟集成直到他们找到一个方便的转折点。
+
+### Snapshots, Not Differences
+
+SVN和Git有着实际的区别，他们的底层实现也遵循完全不同的设计哲学。SVN跟踪文件的差异，而Git版本控制模型是基于快照的。例如，一个SVN commit由diff原文件添加到存储库。Git,另一方面,记录整个内容中每个文件的每个提交。
+
+![commit 3][commit 3]
+
+![commit 4][commit 4]
+
+这使得Git许多操作速度远远超过SVN,因为一个特定版本的文件没有被“拼凑”其差别,每个文件的完整版本是立即可以从Git的内部数据库获取。
+
+Git的快照模型有一个深远的影响，几乎影响每个方面的版本控制模型,影响从其分支和合并工具,其协作工作流。
+
+### Example
+
+下面的示例假设您已经编辑过的hello.py的一些内容和准备提交到项目的历史。首先,你需要阶段文件使用`git add `、然后你可以提交阶段快照。
+
+    git add hello.py
+    git commit
+
+这将会打开一个文本编辑器（可由`git config`配置）询问提交信息，会列出将提交的信息：
+
+    # Please enter the commit message for your changes. Lines starting
+    # with '#' will be ignored, and an empty message aborts the commit.
+    # On branch master
+    # Changes to be committed:
+    # (use "git reset HEAD ..." to unstage)
+    #
+    # modified: hello.py
+    #
+
+Git提交消息不需要遵循任何特定的格式限制,但规范化格式总结整个提交第一行不到50个字符,留下一个空行,然后详细解释改变了什么。例如：
+
+    Change the message displayed by hello.py
+
+    - Update the sayHello() function to output the user's name
+    - Change the sayGoodbye() function to a friendlier message
+
+值得注意的是很多开发人员喜欢用现在式时态在他们提交消息中。这使得他们更喜欢行动上读库,这使得许多历史重写操作更直观。
 
 ## 参考资料
 [gitTutorial][gitTutorial]
@@ -246,3 +319,7 @@ Once you’ve got your project up-and-running, new files can be added by passing
 [git repo]: https://www.atlassian.com/wac/landing/git/tutorial/git-basics/pageSections/00/contentFullWidth/0/tabs/01/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial-basics-clone-repotorepocollaboration.png
 
 [commit 2]: https://www.atlassian.com/wac/landing/git/tutorial/git-basics/pageSections/00/contentFullWidth/0/tabs/03/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial-basics-add-addsnapshot.png
+
+[commit 3]: https://www.atlassian.com/wac/landing/git/tutorial/git-basics/pageSections/00/contentFullWidth/0/tabs/04/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial-basics-commit-snapshots.png
+
+[commit 4]: https://www.atlassian.com/wac/landing/git/tutorial/git-basics/pageSections/00/contentFullWidth/0/tabs/04/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial-basics-commit-snapshots.png
