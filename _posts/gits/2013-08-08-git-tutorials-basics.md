@@ -211,7 +211,7 @@ tags: [gits]
 
 ### The Staging Area
 
-Staging Area 是Git独有的特性，and it can take some time to wrap your head around it if you’re coming from an SVN (or even a Mercurial) background。你可以理解为是工作目录和项目历史之间的缓冲区。
+暂存区是Git独有的特性，and it can take some time to wrap your head around it if you’re coming from an SVN (or even a Mercurial) background。你可以理解为是工作目录和项目历史之间的缓冲区。
 
 Instead of committing all of the changes you've made since the last commit, the stage lets you group related changes into highly focused snapshots before actually committing it to the project history. This means you can make all sorts of edits to unrelated files, then go back and split them up into logical commits by adding related changes to the stage and commit them piece-by-piece. As in any revision control system, it’s important to create atomic commits so that it’s easy to track down bugs and revert changes with minimal impact on the rest of the project.
 
@@ -264,8 +264,6 @@ SVN和Git有着实际的区别，他们的底层实现也遵循完全不同的�
 
 ![commit 3][commit 3]
 
-![commit 4][commit 4]
-
 这使得Git许多操作速度远远超过SVN,因为一个特定版本的文件没有被“拼凑”其差别,每个文件的完整版本是立即可以从Git的内部数据库获取。
 
 Git的快照模型有一个深远的影响，几乎影响每个方面的版本控制模型,影响从其分支和合并工具,其协作工作流。
@@ -297,6 +295,93 @@ Git提交消息不需要遵循任何特定的格式限制,但规范化格式总�
 
 值得注意的是很多开发人员喜欢用现在式时态在他们提交消息中。这使得他们更喜欢行动上读库,这使得许多历史重写操作更直观。
 
+
+## git status
+
+![git status][git status]
+
+(我觉得还是不要按照原文翻译了，水平太有限了，翻译的自己都难看懂了，还是按照自己的理解来)
+
+`git status`命令是用来显示目录和暂存区的状态的，但是不会显示项目提交的历史记录，如果你要看那个的话，就使用`git log`吧。
+
+### Usage
+
+    git status
+
+例子：
+
+    D:\GitHub\tdolydong.github.com>git status
+    # On branch master
+    # Changes not staged for commit:
+    #   (use "git add <file>..." to update what will be committed)
+    #   (use "git checkout -- <file>..." to discard changes in working directory)
+    #
+    #       modified:   _posts/gits/2013-08-08-git-tutorials-basics.md
+    #
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+### Disussion
+
+这个简单的命令可以让你知道当你使用`git add`和`git commit`执行后会提交些什么文件。大家都知道.py文件执行会生成.pyc，但是基本上都不希望把这个文件提交上去，所以你可以在你项目目录下建立一个文件`.gitignore`，然后添加你不希望提交的文件类型，比如：
+
+    *.pyc
+
+这表示所有以这个为扩展名的文件都不会提交。
+
+### Example
+
+一个小例子。温馨提示每次提交或提交完之后最好使用这个命令`git status`查看一下
+
+    # Edit hello.py
+    git status
+    # hello.py is listed under "Changes not staged for commit"
+    git add hello.py
+    git status
+    # hello.py is listed under "Changes to be committed"
+    git commit
+    git status
+    # nothing to commit (working directory clean)
+
+## git log
+
+![git log][git log]
+
+`git log`可以显示已经提交过的快照。你可以详细的列出，设置过滤条件，精确的搜索项目提交的历史记录。这个命令只操作提交过的历史记录。而`git status`可以显示工作目录和暂存区。
+
+![log 1][log 1]
+
+### Usage
+
+    git log
+
+    git log -n <limit>
+
+    git log --oneline
+
+    git log --stat
+
+    git log -p
+
+    git log --author="<pattern>"
+
+    git log --grep="<pattern>"
+
+    git log <since>..<until>
+
+    git log <file>
+
+    git log --graph --decorate --oneline
+
+### Example
+
+    git log --graph --decorate --oneline
+    * ec6a819 Create 2013-07-31-python-lambda-filter-map-reduce.md
+    * f360c5a Update CNAME
+
+
+
+
+
 ## 参考资料
 [gitTutorial][gitTutorial]
 
@@ -322,4 +407,4 @@ Git提交消息不需要遵循任何特定的格式限制,但规范化格式总�
 
 [commit 3]: https://www.atlassian.com/wac/landing/git/tutorial/git-basics/pageSections/00/contentFullWidth/0/tabs/04/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial-basics-commit-snapshots.png
 
-[commit 4]: https://www.atlassian.com/wac/landing/git/tutorial/git-basics/pageSections/00/contentFullWidth/0/tabs/04/pageSections/01/contentFullWidth/00/imageBinary/git-tutorial-basics-commit-snapshots.png
+[log 1]: https://www.atlassian.com/wac/landing/git/tutorial/git-basics/pageSections/00/contentFullWidth/0/tabs/06/pageSections/0/contentFullWidth/00/imageBinary/git-tutorial-basics-logcommand.png
