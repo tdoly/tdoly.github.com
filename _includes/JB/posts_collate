@@ -32,7 +32,43 @@ Usage:
       <ul>
     {% endif %}
   
-    <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    <!--<li><span>{{ post.date | date: "%Y-%m-%e" }}</span> &nbsp;&nbsp; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>-->
+    
+    
+    <div class="page-header">
+      <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+      <div class="tag_box">
+        <li>
+          Tags:
+          {% for tag in post.tags %}
+            <a>{{ tag }}</a>
+          {% endfor%}
+        </li>
+      </div>
+      
+      <li>
+      {{ post.content | truncate: 125 }}
+      <a href="{{ BASE_PATH }}{{ post.url }}">>>Go</a>
+      </li>
+      <div class="pagination">
+      <li>
+        <a>publish</a>
+      </li>
+      <li>
+        <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.date | date: "%Y-%m-%e" }}</a>
+      </li>
+      <li>
+        <a>by</a>
+      </li>
+      <li>
+        <a href="{{ BASE_PATH }}about.html">tdoly</a>
+      </li>
+      <li>
+        <a href="{{ BASE_PATH }}{{ post.url }}#commit">commit</a>
+      </li>
+
+      </div>
+    </div>
   
     {% if forloop.last %}
       </ul>
