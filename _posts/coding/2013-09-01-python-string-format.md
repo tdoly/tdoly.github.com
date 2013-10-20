@@ -6,7 +6,9 @@ tagline:
 tags: [python]
 ---
 
-python属于强类型的语言，如果像java一样操作字符串和数字的“+”时，会出现TypeError。
+python属于强类型的语言，如果像java一样操作字符串和数字的“+”时，会出现TypeError。而python的格式化方法有多种，比如使用占位符，使用format，或者是自定义模版等等。这里介绍了其中的几种方法
+
+下面这个例子很好的说明了python属于强类型语言：
 
     print "abc" + 123
     Traceback (most recent call last):

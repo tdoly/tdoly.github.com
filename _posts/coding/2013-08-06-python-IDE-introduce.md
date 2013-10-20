@@ -9,7 +9,7 @@ tags: [python]
 {% include JB/setup %}
 
 ## IDLE(python GUI)
-这个是在安装python时就会自动安装好，只是一个增强型的交互命令解释窗口。用于验证简短程序还是不错的。
+这个是在安装python时就会自动安装好，只是一个增强型的交互命令解释窗口。用于验证简短程序还是不错的。平常用用还是不错的，麻烦的就是写比较复杂点的程序就不咋样了。这个IDLE对python的格式会进行标注，如果你的换行很乱的话
 
 ## cmd.exe(windows用户)
 将python的安装路径加入到环境变量中，键入`python`就可以使用这个也只是python的交互式shell了。

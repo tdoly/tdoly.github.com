@@ -64,7 +64,7 @@ Usage:
         <a href="{{ BASE_PATH }}about.html">tdoly</a>
       </li>
       <li>
-        <a href="{{ BASE_PATH }}{{ post.url }}#commit">commit</a>
+        <a href="{{ BASE_PATH }}{{ post.url }}#disqus_thread">comment</a>
       </li>
 
       </div>

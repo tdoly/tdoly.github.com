@@ -1,14 +1,15 @@
 ---
 layout: post
-title: 图文并茂的git学习教程（二）
+title: 图文并茂的git学习教程（三）
 category: gits
 tagline: Undoing Git Changes
 tags: [gits]
 ---
 
 # Undoing Git Changes(撤销改变)
-![git changes][git changes]
+
 本章提供一些必要的技术让你很好的工作在软件项目中。首先，它可以显示提交的历史，然后它解释了项目历史与本地未提交文件之间的差异。
+![git changes][git changes]
 
 ## git checkout
 
