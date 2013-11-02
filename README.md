@@ -1,4 +1,4 @@
-tdolydong.github.com
+tdoly.github.com
 ====================
 
 tdoly的个人博客
