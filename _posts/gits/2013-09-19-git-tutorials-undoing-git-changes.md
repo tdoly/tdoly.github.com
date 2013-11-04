@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 图文并茂的git学习教程（三）
-category: gits
+category: tools
 tagline: Undoing Git Changes
 tags: [gits]
 ---
