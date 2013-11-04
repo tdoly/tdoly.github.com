@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 图文并茂的git学习教程（二）
-category: gits
-tagline: Git Basics
+category: tools
+tagline: git basics use
 tags: [gits]
 ---
 
