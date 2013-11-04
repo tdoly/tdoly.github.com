@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 图文并茂的git学习教程（一）
-category: gits
-tagline: 
+category: tools
+tagline: git use
 tags: [gits]
 ---
 
