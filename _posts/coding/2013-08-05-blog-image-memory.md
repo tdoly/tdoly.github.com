@@ -3,8 +3,11 @@ layout: post
 category: coding
 title: blog中图片的存放
 tagline: 结合flickr的使用
+description: 呃，这个时最开始到时候使用到，现在静态资源都放在七牛上去了
 tags: [python]
 ---
+
+{% include contents.html %}
 
 ##Blog的图片
 github提供的免费空间非常的有限，但是流量却是无限制的。所以提倡节约的美德，只好将图片转存到其它地方了。
@@ -30,33 +33,34 @@ Flickr这个大家都知道的，免费1TB的存储空间。不用用太对不�
 
 ##程序(python)
 通过定义自己的flicker的URL,ALT,TEXT获取图片链接和描述文字
+{% highlight python linenos %}
+{% raw %}
+# -*- coding: utf-8 -*-
+"""
+get my flicker image url use to Markdown text
+"""
 
-    # -*- coding: utf-8 -*-
-    """
-    get my flicker image url use to Markdown text
-    """
+__author__ = "mingdong.li"
+__date__ = '$2013-08-01'
+__version__ = '1.0'
 
-    __author__ = "mingdong.li"
-    __date__ = '$2013-08-01'
-    __version__ = '1.0'
+import urllib2
+import re
+import sys
+from bs4 import BeautifulSoup
 
-    import urllib2
-    import re
-    import sys
-    from bs4 import BeautifulSoup
+"""定义自己的URL,ALT和TEXT"""
+URL = 'http://www.flickr.com/photos/96090901@N04/?details=1'
+ALT = '2013-08-06'
+TEXT = '2013-08-06:'
 
-    """定义自己的URL,ALT和TEXT"""
-    URL = 'http://www.flickr.com/photos/96090901@N04/?details=1'
-    ALT = '2013-08-06'
-    TEXT = '2013-08-06:'
-
-    class ImageAndTextValueException(Exception):
-        """A define exception class"""
-        def __init__(self, text, image, text_len, image_len):
-            Exception.__init__(self)
-            self.text = text
-            self.image = image
-            self.text_len = text_len
+class ImageAndTextValueException(Exception):
+    """A define exception class"""
+    def __init__(self, text, image, text_len, image_len):
+        Exception.__init__(self)
+        self.text = text
+        self.image = image
+        self.text_len = text_len
             self.image_len = image_len
 
     def getHtmlText(url):
@@ -108,7 +112,8 @@ Flickr这个大家都知道的，免费1TB的存储空间。不用用太对不�
                 print ls.encode('utf-8')
         else:
             print "Please check the step is right?"
-
+{% endraw %}
+{% endhighlight %}
 
 [flickr介绍]: http://farm4.staticflickr.com/3690/9444632396_ce292439f9.jpg "flickr介绍"
 [上传图片]: http://farm4.staticflickr.com/3713/9441890681_a1e76a3b82.jpg "上传图片"

@@ -1,15 +1,18 @@
 ---
 layout: page
-title: 关于
-header: Posts About
-group: navigation
+permalink: /about/index.html
+title: About Me
+tagline: Minimal Mistakes, a Jekyll Theme
+tags: [about, Jekyll, theme, responsive]
+modified: 9-9-2013
+image:
+  feature: texture-feature-02.jpg
+  credit: Texture Lovers
+  creditlink: http://texturelovers.com
 ---
 
-{% include JB/setup %}
+I am a web based software engineer and working in beijing.
+Now I have programmed in Java, Python programming languages. 
+This blog will write down my work and life in dribs and drabs.
 
-#Hi! 
-    I'm a web based software engineer and working in beijing.
-    Now I've programmed in Java, Python programming languages. 
-    This blog will write down my work and life in dribs and drabs.
-
-                                                --written to myself
+                                            --written to myself

@@ -2,11 +2,11 @@
 layout: post
 title: pythonIDE使用心得
 category: coding
-tagline: 
+description: pythonIDE简介，现在可以再加上个vim了，慢慢摸索学习中...
 tags: [python]
 ---
 
-{% include JB/setup %}
+{% include contents.html %}
 
 ## IDLE(python GUI)
 这个是在安装python时就会自动安装好，只是一个增强型的交互命令解释窗口。用于验证简短程序还是不错的。平常用用还是不错的，麻烦的就是写比较复杂点的程序就不咋样了。这个IDLE对python的格式会进行标注，如果你的换行很乱的话
@@ -30,27 +30,34 @@ sublime只要将python的安装路径加入到环境变量中，使用`Ctrl + B`
 顺便提下一些sublime的不错的第三方包:
 ### Package Control: 
 第三方包的管理工具，比较像ruby的gem，python的easy_install。安装方法：ctrl+\` ，复制下面命令到控制台
-
+{% highlight python linenos %}
     import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')
-
+{% endhighlight %}
   然后就可以`Ctrl + Shift + P` 来管理包了。
 
 ### Emmet:
 `Ctrl + Alt + Enter` 来快速生成html标签
  如：(html>title)>(body>div#first.one)生成如下html
+{% highlight python linenos %}
+{% raw %}
+<html><br />
+  <title></title><br />
+</html><br />
+<body><br />
+  <div id="first" class="one"></div><br />
+</body><br />
+{% endraw %}
+{% endhighlight %}
 
-    &lt;html&gt;<br />
-      &lt;title&gt;&lt;/title&gt;<br />
-    &lt;/html&gt;<br />
-    &lt;body&gt;<br />
-      &lt;div id="first" class="one"&gt;&lt;/div&gt;<br />
-    &lt;/body&gt;<br />
+> GBK Encoding Support: 这个是为了对GBK编码的支持
 
-### GBK Encoding Support: 这个是为了对GBK编码的支持
-### PyV8: 学python的都知道，最近更新了
-### Theme - Soda: 这个主题不错，sublime 还是可以换主题的
-### Markdown Preview：在浏览器中可以浏览自己写的markdown文件
-### MarkdownEditing: sumblime对markdown的支持
+> PyV8: 学python的都知道，最近更新了
+
+> Theme - Soda: 这个主题不错，sublime 还是可以换主题的
+
+> Markdown Preview：在浏览器中可以浏览自己写的markdown文件
+
+> MarkdownEditing: sumblime对markdown的支持
 
 还有其他什么文件搜索，批量替换的快捷操作等等。感兴趣Google之
 
