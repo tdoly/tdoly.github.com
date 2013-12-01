@@ -23,6 +23,16 @@ owner:
   tumblr:
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    https://plus.google.com/u/0/100632295595947080848/posts
+  #weibo
+  weibo: tdoly
+
+#weibo
+weibo_uid: 2038720681
+weibo_verifier: 95bc61d7
+weibo_fansline: 0 # 粉丝显示多少行
+weibo_show: true # 是否显示最近微博内容
+weibo_pic: true # 是否显示微博中的图片
+weibo_skin: 10 # 使用哪种配色风格，数字为从1开始的微博秀风格序号
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: UA-45893829-1

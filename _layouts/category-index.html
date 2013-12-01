@@ -7,7 +7,7 @@
 {% include head.html %}
 </head>
 
-<body class="home" itemscope itemtype="http://schema.org/WebPage">
+<body class="articles" itemscope itemtype="http://schema.org/WebPage">
 
 {% include browser-upgrade.html %}
 
@@ -23,16 +23,21 @@
 </div>
 
 <div id="index" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
-  <h3><a href="{{ site.url}}/articles">Articles</a></h3>
-  {% for post in site.categories.coding limit:5 %}    
-  <article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-    <h2 itemprop="headline"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
-    <p itemprop="text">{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
-  </article>
+  <h1 itemprop="name">{{ page.title }}</h1>
+
+  {% assign categories_list = site.categories %}
+  {% for categories in categories_list %}  
+    {% assign category = categories[0] %}
+    <h3 id="{{ category }}"><a href="#{{ category }}">{{ category }}</a></h3>
+    {% for post in site.categories[category] %}
+      <article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <h2 itemprop="headline"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
+      <p itemprop="text">{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
+    </article>
+
+    {% endfor %}
   {% endfor %}
 </div><!-- /#index -->
-
-{% include category.html %}
 
 <div class="footer-wrap">
   <footer>

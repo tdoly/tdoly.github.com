@@ -1,0 +1,13 @@
+<br/>
+<div id="category" itempop="recipeCategory" itemscop itemtype="http://schema.org/Recipe">
+  <h4>Category</h4>
+  <ul>
+    {% for category in site.categories %}
+    <li>
+      <a href="/categories#{{ category | first }}" title="view all posts">
+        {{ category | first }} <font color="gray">({{ category | last | size}})</font>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
