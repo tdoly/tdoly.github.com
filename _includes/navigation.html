@@ -11,7 +11,18 @@
 		        <li><i class="icon-feed"></i> <a href="{{ site.url }}/feed.xml" title="Atom/RSS feed">Feed</a>
 		    </ul>
 		</nav>
-	</div><!-- /.top-navigation -->
-  <div class="top-navigation">
-  </div>
+  
+  </div><!-- /.top-navigation -->  
+  <script type="text/javascript">
+    function ss(form) {
+      var q = window.encodeURIComponent(form["q"].value)
+      var url = "http://www.google.com/search?q=site:blog.tdoly.com ";
+      url = url + q;
+      window.location = url;
+      return false;
+    }
+  </script>
+  <form onsubmit="return ss(this)" method="get" role="search" target="_blank">
+    <input type="text" size="40" name="q" id="goog-wm-qt" value="" placeholder="search...">
+  </form>
 </div><!-- /.navigation-wrapper -->
