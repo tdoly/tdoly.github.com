@@ -64,6 +64,14 @@ titlecase("this's is blog") #"This's Is Blog"
 {% endraw %}
 {% endhighlight %}
 
+PS:也可以使用string模块下面capwords方法
+{% highlight python linenos %}
+{% raw %}
+import string
+
+string.capwords("this's is blog") #"This's Is Blog"
+{% endraw %}
+{% endhighlight %}
 ##内建函数filter(),map(),reduce()
 
 ###filter(func, seq)
