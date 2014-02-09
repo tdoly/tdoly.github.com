@@ -23,7 +23,7 @@ GitHub Pages是为个人、组织和仓库提供的公共页面，免费托管�
 
 ### Project Pages
 
-这种项目页面是也就建立多个的，但是不能存放在主分支上，需要建立一个名为`gh-pages`的分支。然后以`username.github.io/project-name/`这种形式来访问Project Pages。例如，我在GitHub下建立了一个`demo.tdoly.com`然后，我就可以通过`tdoly.github.io/demo.tdoly.com`来访问了。
+这种项目页面是可以建立多个的，但是不能存放在主分支上，需要建立一个名为`gh-pages`的分支。然后以`username.github.io/project-name/`这种形式来访问Project Pages。例如，我在GitHub下建立了一个`demo.tdoly.com`然后，我就可以通过`tdoly.github.io/demo.tdoly.com`来访问了。
 
 ## 指定域名
 
