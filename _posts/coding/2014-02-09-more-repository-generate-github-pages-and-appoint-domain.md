@@ -6,6 +6,8 @@ description: 将Project Pages的项目放入名为gh-pages的分支下面,然后
 tags: [github pages, jekyll]
 ---
 
+{% include contents.html %}
+
 今天为了测试顶级域名，二级域名下cookie的作用域，新建了一个demo仓库。在为仓库指定域名时，没成功。然后查了下GitHub Pages的域名指定，记录下。
 
 ## [GitHub Pages][github-pages]介绍
