@@ -2,8 +2,8 @@ title:            tdoly's blog
 tagline:          学而知吾不足
 description:      This blog will write down my work and life in dribs and drabs
 #Comment out url when working locally to resolve base urls correctly
-url:              http://blog.tdoly.com
-#url:              http://localhost:4000
+#url:              http://blog.tdoly.com
+url:              http://localhost:4000
 
 #blog图片存放在七牛
 head_image_url:   http://blog-tdoly-com.u.qiniudn.com/@/image/blog/head/
